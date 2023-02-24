@@ -2,6 +2,10 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:mosquenearme/firebase_options.dart';
 import 'package:mosquenearme/page/main_page.dart';
+import 'package:mosquenearme/page/splash_screen.dart';
+import 'package:mosquenearme/provider/mosques_provider.dart';
+import 'package:mosquenearme/provider/my_position_provider.dart';
+import 'package:provider/provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -48,6 +52,12 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return MainPage();
+    return MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => MosquesProvider()),
+        ChangeNotifierProvider(create: (_) => MyPositionProvider()),
+      ],
+      child: MaterialApp(home: SplashScreen()),
+    );
   }
 }
