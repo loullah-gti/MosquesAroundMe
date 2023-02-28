@@ -57,7 +57,10 @@ class _MyHomePageState extends State<MyHomePage> {
         ChangeNotifierProvider(create: (_) => MosquesProvider()),
         ChangeNotifierProvider(create: (_) => MyPositionProvider()),
       ],
-      child: MaterialApp(home: SplashScreen()),
+      child: MaterialApp(
+        home: SplashScreen(),
+        locale: Locale("ar"),
+      ),
     );
   }
 }

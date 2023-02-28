@@ -16,6 +16,10 @@ class MosqueService {
         markerId: MarkerId(m.id),
         position: p,
         icon: MapsService.mosqueMarker,
+        onTap: () {
+          int i = AllProvidersService.mosquesProvider?.mosques.indexOf(m) ?? 0;
+          AllProvidersService.mosquesProvider?.featuredMosque = i;
+        },
       );
       markers.add(marker);
     }

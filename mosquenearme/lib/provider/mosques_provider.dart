@@ -8,4 +8,11 @@ class MosquesProvider extends ChangeNotifier {
     _mosques = mosques;
     notifyListeners();
   }
+
+  int _featuredMosque = 0;
+  int get featuredMosque => _featuredMosque;
+  set featuredMosque(int value) {
+    _featuredMosque = value;
+    notifyListeners();
+  }
 }

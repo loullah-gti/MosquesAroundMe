@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mosquenearme/component/maps_widget.dart';
+import 'package:mosquenearme/page/mosques_list.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
@@ -11,8 +12,13 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: MapsWidget(),
+    return Scaffold(
+      body: Stack(
+        children: [
+          MapsWidget(),
+          MosquesList(),
+        ],
+      ),
     );
   }
 }

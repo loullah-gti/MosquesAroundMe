@@ -31,4 +31,28 @@ class Mosque {
       'lastUpdate': lastUpdate,
     };
   }
+
+  NextPrayerInfos getNextPrayer() {
+    DateTime now = DateTime.now();
+    return NextPrayerInfos(
+        lib: "العصر", time: this.prayers["asr"], status: 1, munitesLeft: 5);
+  }
+
+  String getNextPrayerLib() {
+    DateTime now = DateTime.now();
+    return this.prayers["asr"];
+  }
+}
+
+class NextPrayerInfos {
+  final String lib;
+  final String time;
+  final int munitesLeft;
+  final int status;
+
+  NextPrayerInfos(
+      {required this.lib,
+      required this.time,
+      required this.status,
+      required this.munitesLeft});
 }
