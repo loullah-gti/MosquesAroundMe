@@ -15,4 +15,8 @@ class MosquesProvider extends ChangeNotifier {
     _featuredMosque = value;
     notifyListeners();
   }
+
+  PageController controller = PageController(
+    viewportFraction: 0.7,
+  );
 }

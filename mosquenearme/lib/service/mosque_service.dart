@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:mosquenearme/model/mosque.dart';
 import 'package:mosquenearme/service/all_providers_service.dart';
@@ -19,6 +20,8 @@ class MosqueService {
         onTap: () {
           int i = AllProvidersService.mosquesProvider?.mosques.indexOf(m) ?? 0;
           AllProvidersService.mosquesProvider?.featuredMosque = i;
+          AllProvidersService.mosquesProvider?.controller.animateToPage(i,
+              duration: const Duration(seconds: 1), curve: Curves.easeIn);
         },
       );
       markers.add(marker);

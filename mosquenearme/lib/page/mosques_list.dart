@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mosquenearme/model/mosque.dart';
 import 'package:mosquenearme/provider/mosques_provider.dart';
+import 'package:mosquenearme/service/all_providers_service.dart';
 import 'package:provider/provider.dart';
 
 class MosquesList extends StatefulWidget {
@@ -21,7 +22,7 @@ class _MosquesListState extends State<MosquesList> {
           height: 200, // card height
           child: PageView.builder(
             itemCount: mosquesProvider.mosques.length,
-            controller: PageController(viewportFraction: 0.7),
+            controller: mosquesProvider.controller,
             onPageChanged: (int index) =>
                 mosquesProvider.featuredMosque = index,
             itemBuilder: (_, i) {
