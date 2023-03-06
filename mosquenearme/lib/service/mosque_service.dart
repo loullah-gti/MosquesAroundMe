@@ -16,7 +16,9 @@ class MosqueService {
       Marker marker = Marker(
         markerId: MarkerId(m.id),
         position: p,
-        icon: MapsService.mosqueMarker,
+        icon: AllProvidersService.mosquesProvider?.isFeatured(m.id) ?? false
+            ? MapsService.mosqueMarkerHuge
+            : MapsService.mosqueMarker,
         onTap: () {
           int i = AllProvidersService.mosquesProvider?.mosques.indexOf(m) ?? 0;
           AllProvidersService.mosquesProvider?.featuredMosque = i;

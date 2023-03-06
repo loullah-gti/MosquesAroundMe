@@ -16,6 +16,10 @@ class MosquesProvider extends ChangeNotifier {
     notifyListeners();
   }
 
+  bool isFeatured(String id) {
+    return _mosques[featuredMosque].id == id;
+  }
+
   PageController controller = PageController(
     viewportFraction: 0.7,
   );
