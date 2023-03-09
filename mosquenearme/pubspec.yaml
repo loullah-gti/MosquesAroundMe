@@ -42,6 +42,7 @@ dependencies:
   geolocator: ^9.0.2
   provider: ^6.0.5
   geoflutterfire2: ^2.3.14
+  intl: ^0.18.0
 
 dev_dependencies:
   flutter_test:

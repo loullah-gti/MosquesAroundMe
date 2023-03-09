@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:math' show cos, sqrt, asin;
 
 import 'package:geolocator/geolocator.dart';
+import 'package:mosquenearme/model/mosque.dart';
 import 'package:mosquenearme/service/all_providers_service.dart';
 
 class LocationService {
@@ -59,5 +60,15 @@ class LocationService {
         .listen((p) {
       AllProvidersService.myPositionProvider?.currentPosition = p;
     });
+  }
+
+  static void setDistanceFromCurrentLocation(Mosque m) {
+    if (AllProvidersService.myPositionProvider?.currentPosition != null) {
+      m.distanceFromCurrentPos = calculateDistance(
+          m.gps.latitude,
+          m.gps.longitude,
+          AllProvidersService.myPositionProvider?.currentPosition?.latitude,
+          AllProvidersService.myPositionProvider?.currentPosition?.longitude);
+    }
   }
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mosquenearme/model/mosque.dart';
 import 'package:mosquenearme/provider/mosques_provider.dart';
-import 'package:mosquenearme/service/all_providers_service.dart';
+import 'package:mosquenearme/service/time_game/prayer_time_utils.dart';
 import 'package:provider/provider.dart';
 
 class MosquesList extends StatefulWidget {
@@ -52,8 +52,10 @@ class MosqueCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    NextPrayerInfos nextPrayerInfos = this.mosque.getNextPrayer();
+    NextPrayerInfos nextPrayerInfos = mosque.getNextPrayer();
     Color color = nextPrayerInfos.status == 1 ? Colors.green : Colors.red;
+    String timeLeft = getTimeLeftStr(
+        nextPrayerInfos.hoursLeft, nextPrayerInfos.munitesLeft % 60);
     return ListView(
       children: [
         Text(
@@ -61,14 +63,13 @@ class MosqueCard extends StatelessWidget {
           style: TextStyle(fontSize: 26),
         ),
         Divider(),
-        Text("الصلاة القادمة"),
-        Text(nextPrayerInfos.lib),
+        Text("الصلاة القادمة: ${nextPrayerInfos.lib}"),
         Text(
           nextPrayerInfos.time,
-          style: TextStyle(color: color),
+          style: TextStyle(fontSize: 20),
         ),
         Text(
-          "${nextPrayerInfos.munitesLeft} دقائق",
+          timeLeft,
           style: TextStyle(color: color),
         ),
       ],

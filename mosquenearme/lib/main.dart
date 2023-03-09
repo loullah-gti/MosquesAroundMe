@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:mosquenearme/firebase_options.dart';
 import 'package:mosquenearme/page/main_page.dart';
 import 'package:mosquenearme/page/splash_screen.dart';
+import 'package:mosquenearme/provider/list_providers.dart';
+import 'package:mosquenearme/provider/map_provider.dart';
 import 'package:mosquenearme/provider/mosques_provider.dart';
 import 'package:mosquenearme/provider/my_position_provider.dart';
 import 'package:provider/provider.dart';
@@ -53,13 +55,10 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return MultiProvider(
-      providers: [
-        ChangeNotifierProvider(create: (_) => MosquesProvider()),
-        ChangeNotifierProvider(create: (_) => MyPositionProvider()),
-      ],
+      providers: allAppProviders,
       child: MaterialApp(
         home: SplashScreen(),
-        locale: Locale("ar"),
+        locale: const Locale("ar"),
       ),
     );
   }
