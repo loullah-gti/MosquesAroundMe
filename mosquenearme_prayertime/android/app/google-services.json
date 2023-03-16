@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "918767328904",
+    "project_id": "mosquenearme-a3c00",
+    "storage_bucket": "mosquenearme-a3c00.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918767328904:android:c7c7bc6906ffd80ac9893d",
+        "android_client_info": {
+          "package_name": "com.example.mosquenearme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918767328904-arnpt4psc4509e9qh9h4bhcnrm1miftt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDp-8RSzSCJK-bvw-_W4L22dEj5iEj4JEw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918767328904-arnpt4psc4509e9qh9h4bhcnrm1miftt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "918767328904-b5kn117bu1i4ul0fd0tus95vhel4kmvn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.mosquenearme"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:918767328904:android:9c3d2fcc718db26bc9893d",
+        "android_client_info": {
+          "package_name": "com.loullah.mosquenearme_prayertime"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "918767328904-arnpt4psc4509e9qh9h4bhcnrm1miftt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDp-8RSzSCJK-bvw-_W4L22dEj5iEj4JEw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "918767328904-arnpt4psc4509e9qh9h4bhcnrm1miftt.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "918767328904-b5kn117bu1i4ul0fd0tus95vhel4kmvn.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.mosquenearme"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

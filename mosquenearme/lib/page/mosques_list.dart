@@ -56,23 +56,26 @@ class MosqueCard extends StatelessWidget {
     Color color = nextPrayerInfos.status == 1 ? Colors.green : Colors.red;
     String timeLeft = getTimeLeftStr(
         nextPrayerInfos.hoursLeft, nextPrayerInfos.munitesLeft % 60);
-    return ListView(
-      children: [
-        Text(
-          mosque.lib,
-          style: TextStyle(fontSize: 26),
-        ),
-        Divider(),
-        Text("الصلاة القادمة: ${nextPrayerInfos.lib}"),
-        Text(
-          nextPrayerInfos.time,
-          style: TextStyle(fontSize: 20),
-        ),
-        Text(
-          timeLeft,
-          style: TextStyle(color: color),
-        ),
-      ],
+    return Padding(
+      padding: EdgeInsets.all(10),
+      child: ListView(
+        children: [
+          Text(
+            mosque.lib,
+            style: TextStyle(fontSize: 26),
+          ),
+          Divider(),
+          Text("الصلاة القادمة: ${nextPrayerInfos.lib}"),
+          Text(
+            nextPrayerInfos.time,
+            style: TextStyle(fontSize: 20),
+          ),
+          Text(
+            timeLeft,
+            style: TextStyle(color: color),
+          ),
+        ],
+      ),
     );
   }
 }

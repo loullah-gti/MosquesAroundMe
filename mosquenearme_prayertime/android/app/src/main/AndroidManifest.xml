@@ -1,5 +1,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.loullah.mosquenearme_prayertime">
+    <uses-permission android:name="android.permission.INTERNET" />
    <application
         android:label="mosquenearme_prayertime"
         android:name="${applicationName}"
